@@ -1,15 +1,13 @@
-import { Footer } from "@/components/footer";
-import { HeroSection } from "@/components/hero-section";
-import { ScenesSection } from "@/components/scenes-section";
-import { StepsSection } from "@/components/steps-section";
+import { HomeBranchesSection } from "@/components/home-branches-section";
+import { HomepageFooter } from "@/components/homepage-footer";
+import { HomepageHero } from "@/components/homepage-hero";
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-[var(--background)] text-[var(--foreground)]">
-      <HeroSection />
-      <StepsSection />
-      <ScenesSection />
-      <Footer />
+      <HomepageHero />
+      <HomeBranchesSection />
+      <HomepageFooter />
     </main>
   );
 }

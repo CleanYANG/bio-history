@@ -7,8 +7,5 @@ build
 .env.local
 .DS_Store
 .vercel
-**/node_modules
-**/.next
-**/.vercel
-*token*.txt
-*-vercel-token.txt
+
+.vercel

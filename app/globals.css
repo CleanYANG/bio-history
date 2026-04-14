@@ -3,14 +3,14 @@
 @tailwind utilities;
 
 :root {
-  --background: #fcfcf9;
-  --foreground: #111111;
-  --muted: #5f646d;
+  --background: #f6f4ef;
+  --foreground: #171616;
+  --muted: #69645f;
   --line: rgba(17, 17, 17, 0.08);
-  --card: rgba(255, 255, 255, 0.88);
+  --card: rgba(255, 255, 255, 0.9);
   --accent: #dcefe8;
   --accent-strong: #2d6b57;
-  --shadow: 0 20px 60px rgba(17, 17, 17, 0.06);
+  --shadow: 0 20px 60px rgba(17, 17, 17, 0.07);
 }
 
 * {
@@ -24,7 +24,8 @@ html {
 body {
   margin: 0;
   background:
-    radial-gradient(circle at top, rgba(220, 239, 232, 0.7), transparent 28%),
+    radial-gradient(circle at top, rgba(255, 255, 255, 0.82), transparent 24%),
+    radial-gradient(circle at 86% 12%, rgba(243, 209, 198, 0.45), transparent 18%),
     var(--background);
   color: var(--foreground);
   font-family:
@@ -49,4 +50,158 @@ button {
 
 ::selection {
   background: rgba(45, 107, 87, 0.14);
+}
+
+.homepage-title {
+  margin: 2rem 0 0;
+  padding: 0.15em 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  column-gap: 0.18em;
+  row-gap: 0.12em;
+  font-size: clamp(3rem, 8vw, 4.5rem);
+  line-height: 1.15;
+  text-align: left;
+}
+
+.homepage-title-red {
+  font-family:
+    "Smiley Sans",
+    "PingFang SC",
+    "Hiragino Sans GB",
+    "Microsoft YaHei",
+    "Noto Sans SC",
+    sans-serif;
+  color: #c84536;
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+.homepage-title-rest {
+  font-family:
+    "LXGW WenKai Screen",
+    "LXGW WenKai",
+    "Klee One",
+    "PingFang SC",
+    "Hiragino Sans GB",
+    "Microsoft YaHei",
+    sans-serif;
+  font-size: 0.66em;
+  font-weight: 500;
+  color: #3a3937;
+  letter-spacing: 0.03em;
+  transform: translateY(-0.04em);
+}
+
+.homepage-title-side-note {
+  margin-left: 0.55em;
+  align-self: flex-start;
+  font-family:
+    "LXGW WenKai Screen",
+    "LXGW WenKai",
+    "Klee One",
+    "PingFang SC",
+    "Hiragino Sans GB",
+    "Microsoft YaHei",
+    sans-serif;
+  font-size: 0.22em;
+  font-weight: 500;
+  color: rgba(108, 100, 94, 0.7);
+  letter-spacing: 0.08em;
+  transform: translateY(0.45em) rotate(-2.5deg);
+}
+
+.homepage-hero-panel {
+  position: relative;
+  padding: 1rem 0 1.25rem;
+}
+
+.homepage-hero-panel::before {
+  content: "";
+  position: absolute;
+  inset: auto auto 0 -1.5rem;
+  width: min(240px, 38vw);
+  height: min(140px, 18vw);
+  border-radius: 9999px;
+  background: radial-gradient(circle, rgba(243, 209, 198, 0.48), transparent 70%);
+  filter: blur(16px);
+  z-index: -1;
+}
+
+.handwritten-soft {
+  font-family:
+    "LXGW WenKai Screen",
+    "LXGW WenKai",
+    "Klee One",
+    "PingFang SC",
+    "Hiragino Sans GB",
+    "Microsoft YaHei",
+    sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
+.casual-fade-in {
+  animation: casual-fade-in 280ms ease-out;
+}
+
+@keyframes casual-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 1023px) {
+}
+
+.cosmic-fade-in {
+  animation: cosmic-fade-in 320ms ease-out;
+}
+
+.cosmic-particle {
+  position: absolute;
+  border-radius: 9999px;
+  background: rgba(214, 232, 255, 0.72);
+  box-shadow: 0 0 14px rgba(144, 186, 255, 0.46);
+  animation: cosmic-drift 7s ease-in-out infinite;
+}
+
+.cosmic-particle:nth-child(2n) {
+  animation-duration: 9s;
+}
+
+.cosmic-particle:nth-child(3n) {
+  animation-duration: 11s;
+}
+
+@keyframes cosmic-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes cosmic-drift {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 0.45;
+  }
+
+  50% {
+    transform: translate3d(0, -8px, 0);
+    opacity: 1;
+  }
 }

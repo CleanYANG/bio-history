@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "红的奇思妙想",
-  description: "一个记录奇怪想法、脑洞问题、科学哲学思考和日常观察的网站。",
+  title: "Evo-History",
+  description:
+    "A project exploring how people make decisions under different environments.",
 };
 
 export default function RootLayout({
@@ -12,7 +13,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="zh-CN">
+    <html lang="en">
       <body>{children}</body>
     </html>
   );
